@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="../css/KimJin.css"/>
+	<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ee448f93a431982597a1f2aeb1935611"></script>
+	<script src="../js/KimJin.js" defer></script>
+</head>
+<body>
+	<header>
+		<div></div>
+	</header>
+	<!-- 리모컨 기능 -->
+	<div class="remote-box">
+		<a href="#section1">Home</a>
+		<a href="#section2">Introduce</a>
+		<a href="#section3">Etc</a>
+	</div>
+	<section id="section1">
+		<div class="profile-box">
+			<!-- 동그랗게 프로필 이미지 -->
+			<div class="profile-image"></div>
+			<div class="profile-name">김진</div>
+		</div>
+		<!-- 이미지 박스들 grid 2*3 -->
+		<div class="grid-container">
+			<div class="grid-item">
+				<div>
+					<div class="show">Kim Jin</div>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div>
+					<p class="show">최근 관심사는</p>
+					<p class="showing off">JSON 활용하기</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div>
+					<p class="show">자격증은</p>
+					<p class="showing off">정보처리기사, SQLD(준비중)</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div>
+					<p class="show">한번쯤 해보고싶은</p>
+					<p class="showing off">Web Game Development</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div>
+					<p class="show">취미는</p>
+					<p class="showing off">멍때리기</p>
+				</div>
+			</div>
+			<div class="grid-item">
+				<div>
+					<div class="show">inclined37@gmail.com</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="section2">
+		<div id="map"></div>
+		<div id="map-desc"></div>
+	</section>
+	<section id="section3">
+		<div id="draggable" draggable="true">드래그할 요소</div>
+		<div id="droppable">드롭 영역</div>
+	</section>
+</body>
+
+</html>
