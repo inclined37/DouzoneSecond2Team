@@ -12,28 +12,89 @@
      margin: 0px;
      padding: 0px;
 }
- header {
-     width:100vw;
-     height:40px;
-     background-color: #E04D4D;
-}
  section {
      width:100vw;
      height:100vh;
      margin:auto;
 }
+ header {
+     width:100vw;
+     height:40px;
+     background-color: #e46565;
+     position: fixed;
+     top:0;
+}
+header > a {
+	text-decoration: none;
+}
  #section2 {
+     margin-top: 50px;
+}
+ #section2 .map-title {
+     width: 500px;
+     padding-top:40px;
+     margin: auto;
+     font-size: 48px;
+     text-align: center;
+     font-family: 'TmonMonsori';
+}
+ #section2 .map-content {
      display: flex;
+     margin: auto;
+     flex-direction: row;
+     height: 700px;
+     margin: 50px;
 }
  #map {
-     width: 500px;
-     height: 400px;
-     background-color: orange;
+     width: 45%;
+     height: 100%;
 }
  #map-desc {
-     width: 80%;
-     height: 400px;
-     background-color: lightgray;
+     width: 55%;
+     height: 100%;
+     background-color: rgb(240,240,240);
+}
+ #map-desc > div {
+     margin: 20px 25px;
+     width: fit-content;
+     font-family: 'TmonMonsori';
+     font-size: 30px;
+}
+ #map-desc > div > span {
+     color: rgba(0,0,0,0.5);
+     font-size: 20px;
+}
+ #map-desc > ul {
+     list-style: square;
+     font-family: 'SUITE-Regular';
+}
+ .customoverlay {
+     position: relation;
+     background-color:white;
+     transform: translateY(-55px);
+     padding: 5px 10px 5px 10px;
+     border-radius: 5px;
+     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+ .customoverlay:after {
+     content: '';
+     position: absolute;
+     bottom: 1px;
+     left: 50%;
+     width: 0;
+     height: 0;
+     border: 10px solid transparent;
+     border-top-color: white;
+     border-bottom: 0;
+     margin-left: -10px;
+     margin-bottom: -10px;
+}
+ .customoverlay .title {
+     font-family: 'TmonMonsori';
+     background-image: linear-gradient(0.25turn, rgb(103 232 249),rgb(129 140 248));
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
 }
  #draggable {
      width: 100px;
@@ -84,21 +145,23 @@
 }
  .profile-box {
      width:100%;
-     margin: 10px 0px 10px 0px;
+     margin: 5px 0px 5px 0px;
+     padding: 5px 0px;
      display: flex;
      align-items: center;
      background-color: rgb(240,240,240);
 }
  .profile-image {
-     margin-left:10px;
+     margin-left:25px;
      width: 100px;
      height: 100px;
      border-radius: 100%;
-     background: url(../img/catHaaam.jpg);
+     background: url(../img/loopy.jpg);
      background-size: cover;
+     background-position: top;
 }
  .profile-name {
-     margin-left: 30px;
+     margin-left: 50px;
      font-size: 40px;
      font-family: 'TmonMonsori';
 }
@@ -109,7 +172,7 @@
      width: fit-content;
      display: grid;
      grid-template-columns: auto auto auto;
-     gap: 10px 10px;
+     gap: 15px 15px;
 }
  .grid-item {
      width: 300px;
@@ -122,8 +185,8 @@
 }
  .grid-content {
      font-family : 'SUITE-Regular';
-     text-align:center;
-     margin: 5px;
+     text-align:left;
+     margin: 5px 10px;
 }
  .grid-content > span {
      font-family : 'SUITE-Regular';
@@ -153,6 +216,8 @@
  .clickoff.off.in-active {
      animation-name: moveInDown;
      animation-duration: 300ms;
+     animation-timing-function: ease-in;
+     animation-fill-mode: forwards;
 }
  @keyframes moveInUp {
      0% {

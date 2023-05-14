@@ -28,25 +28,26 @@ let items = document.querySelectorAll('.clickoff');
 
 items.forEach(item => {
 	item.addEventListener('mouseenter', () => {
+		item.classList.remove('in-active');
 		item.classList.add('active');
 	});
 	item.addEventListener('mouseleave', () => {
-		item.style.opacity = 0;
-
-		item.classList.add('in-active');
+		//item.style.opacity = 0;
+		
 		item.classList.remove('active');
+		item.classList.add('in-active');
 
 		setTimeout(() => {
 			item.classList.add('active');
 			item.style.opacity = '';
-		}, 5)
-		
+		}, 1)
+		/*
 		item.addEventListener('animationend', () => {
 			item.classList.remove('active', 'in-active');
 			item.style.opacity = '';
 			item.removeEventListener('animationend', onanimationend);
 		});
-
+*/
 	});
 	item.addEventListener('click', () => {
 		item.classList.remove('off');
