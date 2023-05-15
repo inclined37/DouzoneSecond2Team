@@ -1,16 +1,19 @@
 @font-face {
-     font-family: 'SUITE-Regular';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-     font-weight: 400;
-     font-style: normal;
-     font-family: 'TmonMonsori';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
  body {
      margin: 0px;
      padding: 0px;
+     scroll-margin-top: 100px;
 }
  section {
      width:100vw;
@@ -21,14 +24,17 @@
      width:100vw;
      height:40px;
      background-color: #e46565;
-     position: fixed;
+     font-family: 'TmonMonsori';
+     position: sticky;
+     z-index: 20;
      top:0;
 }
 header > a {
 	text-decoration: none;
-}
- #section2 {
-     margin-top: 50px;
+	color: white;
+	background-color: yellow;
+	height: 100%;
+	
 }
  #section2 .map-title {
      width: 500px;
@@ -66,7 +72,7 @@ header > a {
 }
  #map-desc > ul {
      list-style: square;
-     font-family: 'SUITE-Regular';
+     font-family: 'GmarketSansMedium';
 }
  .customoverlay {
      position: relation;
@@ -114,6 +120,7 @@ header > a {
      height:200px;
      padding: 10px 5px 10px 5px;
      border-radius: 5px;
+     font-family: 'TmonMonsori';
      display: flex;
      flex-direction: column;
      align-content: center;
@@ -132,7 +139,6 @@ header > a {
      margin: 5px 0px 5px 0px;
      padding: 10px 0px 10px 0px;
      text-decoration:none;
-     font-family: 'TmonMonsori';
      border-color: rgb(200,200,200);
      text-align:center;
      color: rgb(12,12,12);
@@ -175,8 +181,8 @@ header > a {
      gap: 15px 15px;
 }
  .grid-item {
-     width: 300px;
-     height: 200px;
+     width: 400px;
+     height: 300px;
      background-color: rgb(240,240,240);
      border-radius: 5px;
      display: grid;
@@ -184,21 +190,21 @@ header > a {
      align-items: center;
 }
  .grid-content {
-     font-family : 'SUITE-Regular';
+     font-family : 'GmarketSansMedium';
      text-align:left;
-     margin: 5px 10px;
+     margin: 5px 20px;
 }
  .grid-content > span {
-     font-family : 'SUITE-Regular';
      color: #E04D4D;
 }
  .clickoff.on {
      display:none;
 }
  .clickoff.off {
-     width:300px;
-     height:200px;
+     width:400px;
+     height:300px;
      position:absolute;
+     z-index:10;
      display: block;
      text-align:center;
      border-radius: 5px;
@@ -246,12 +252,13 @@ header > a {
     }
 }
  .clickoff.off > div {
-     text-align:center;
-     padding: 10px 0px 10px 0px;
-     border: dotted;
      border-radius: 5px;
-     font-family:'TmonMonsori';
+     font-family: 'TmonMonsori';
      font-size: 30px;
-     transform: translateY(100%);
+     width:100%;
+     height:100%;
+     display:flex;
+     align-items:center;
+     justify-content: center;
 }
  

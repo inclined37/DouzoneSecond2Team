@@ -1,53 +1,30 @@
 
-
-/*
-const draggable = document.getElementById('draggable');
-const droppable = document.getElementById('droppable');
-
-draggable.addEventListener('dragstart', (event) => {
-  // 드래그가 시작될 때 실행되는 이벤트 핸들러
-  event.dataTransfer.setData('text/plain', event.target.id);
-});
-
-droppable.addEventListener('dragover', (event) => {
-  // 드롭 영역 위에 드래그 중인 요소가 있을 때 실행되는 이벤트 핸들러
-  event.preventDefault();
-});
-
-droppable.addEventListener('drop', (event) => {
-  // 요소를 드롭했을 때 실행되는 이벤트 핸들러
-  event.preventDefault();
-  const data = event.dataTransfer.getData('text/plain');
-  const draggedElement = document.getElementById(data);
-  droppable.appendChild(draggedElement);
-});
-*/
-
 //animation
 let items = document.querySelectorAll('.clickoff');
 
 items.forEach(item => {
 	item.addEventListener('mouseenter', () => {
-		item.classList.remove('in-active');
 		item.classList.add('active');
 	});
 	item.addEventListener('mouseleave', () => {
-		//item.style.opacity = 0;
-		
-		item.classList.remove('active');
-		item.classList.add('in-active');
+		item.style.opacity = 0;
 
+		item.classList.add('in-active');
+		item.classList.remove('active');
+		
+		/*
 		setTimeout(() => {
 			item.classList.add('active');
 			item.style.opacity = '';
-		}, 1)
-		/*
+		}, 1)*/
+		
+		
 		item.addEventListener('animationend', () => {
 			item.classList.remove('active', 'in-active');
 			item.style.opacity = '';
 			item.removeEventListener('animationend', onanimationend);
 		});
-*/
+
 	});
 	item.addEventListener('click', () => {
 		item.classList.remove('off');
