@@ -88,8 +88,8 @@
      display: block !important;
 }
  section {
-     min-height: calc(100vh - 80px);
-     padding-top: 80px;
+     min-height: calc(100vh - 300px);
+     padding-top: 40px;
 }
 section.on{
 	display:block;
@@ -97,29 +97,42 @@ section.on{
 section.off{
 	display: none;
 }
+.nav-link{
+	font-size: 28px;
+}
+.cardlist{
+	display:grid;
+	grid-template-columns: auto auto;
+    gap: 15px 15px;
+    background-color: yellowgreen;
+}
+.cards.h-100{
+	width: 30%;
+    background-color: brown;
+}
  #section1 {
-     background-image: url(path/to/image1.jpg);
+     /*background-image: url(path/to/image1.jpg);*/
      background-size: cover;
      background-position: center;
      padding-top: 80px;
     /* 헤더의 높이만큼 패딩 추가 */
      display: flex;
      justify-content: space-around;
-     padding-top: 150px;
+     padding-top: 100px;
      flex-wrap: wrap;
 }
  #section2 {
-     background-image: url(path/to/image2.jpg);
+     /*background-image: url(path/to/image2.jpg);*/
      background-size: cover;
      background-position: center;
-     padding-top: 150px;
+     padding-top: 100px;
     /* 헤더의 높이만큼 패딩 추가 */
 }
  #section3 {
-     background-image: url(path/to/image3.jpg);
+     /*background-image: url(path/to/image3.jpg);*/
      background-size: cover;
      background-position: center;
-     padding-top: 150px;
+     padding-top: 100px;
     /* 헤더의 높이만큼 패딩 추가 */
 }
  #mini-nav-logo {
@@ -234,6 +247,11 @@ section.off{
         /* 화면 크기가 768px 이하일 때, profiles-wrapper의 패딩을 줄입니다. */
     }
 }
+@media screen and (min-width: 1300px){
+	#section3 .video-container{
+	flex-direction: column;
+	}
+}
  .videos{
      margin: 10px 50px 10px 50px;
      min-width: 600px;
@@ -256,21 +274,18 @@ section.off{
      display: flex;
      flex-direction: row;
 }
- #section3 .mainVideo-add{
-     display: flex;
-     flex-direction: column;
-}
  #section3 .button-list{
      margin-top:10px;
      width: 40%;
-     min-width: 600px;
-     height: 100px;
+     min-width: 500px;
+     height: 316px;
      display: flex;
      flex-direction: column;
+     background-color: rgba(211,211,211,0.8);
 }
  #section3 .button-list > a{
-     width: 40%;
-     min-width: 600px;
+     width: 100%;
+     min-width: 500px;
      height: 40px;
      padding: 2px 10px 2px 10px;
      cursor: pointer;
@@ -282,25 +297,25 @@ section.off{
      color: #FCB86F;
 }
  #section3 .button-list > a:hover{
-     background-color: #333333;
-     color: #FCB86F;
+     background-color: rgba(51,51,51,0.8);
+     color: rgb(252,184,111);
 }
  #section3 .button-list > a:active{
      transform: scale(1.05);
      animation-duration: 750ms;
 }
  #section3 .video-detail{
-     margin: 10px 10px 0px 10px;
-     width: 600px;
-     height: 100%;
+     margin: auto;
+     width: 95%;
      padding: 15px 10px 15px 10px;
      background-color: whitesmoke;
      color: #333;
-     transform: translate(-10px, 35px);
      border-radius: 5px;
+     transform: translateX(25px);
 }
  #section3 .video-detail>div{
      width:100%;
+     font-size: 20px;
      overflow: auto;
 }
  #section3 .video-detail > div.on{

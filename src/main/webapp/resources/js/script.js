@@ -1,4 +1,4 @@
-    /*
+ /*
     const miniNavBtn = document.getElementById('mini-nav-btn');
     const miniNavMenu = document.getElementById('mini-nav-menu');
 
@@ -45,7 +45,12 @@
     audioPlayer.src = audioSources[currentSource].dataset.src;
 
     // 첫 번째 오디오 파일을 재생
-    audioPlayer.play();
+    
+  document.addEventListener("click", function() {
+    //audio.play(); // 오디오 재생
+      audioPlayer.play();
+  }, { once: true }); // 한 번만 실행되도록 설정
+
 
     function updateSongInfo(index) {
         const songInfo = document.getElementById('song-info');
@@ -64,12 +69,8 @@
         });
     });
 
-    // 첫 번째 오디오 파일을 재생
-    audioPlayer.src = audioSources[currentSource].dataset.src;
-    audioPlayer.play();
-    updateSongInfo(currentSource);
-
-
+    
+/*
 const jangImg = document.getElementById('jang');
 const originJangSrc = '/resources/img/bin.jpg';
 const hoverJangSrc = '/resources/img/binHeart.jpg';
@@ -117,7 +118,7 @@ aleumImg.addEventListener('mouseover',function(){
 aleumImg.addEventListener('mouseout',function(){
    aleumImg.src= originaleumSrc;
 });
-
+*/
 
 
 function togglevideo(index) {
@@ -153,10 +154,9 @@ function togglevideo(index) {
   });
 }
 
+/*
 //캡쳐 버튼 클릭 이벤트
 document.getElementsByClassName('capture').addEventListener("click", function() {
 	let getIframe = document.get
 })
-
-
-
+*/
