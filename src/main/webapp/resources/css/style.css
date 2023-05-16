@@ -91,6 +91,12 @@
      min-height: calc(100vh - 80px);
      padding-top: 80px;
 }
+section.on{
+	display:block;
+}
+section.off{
+	display: none;
+}
  #section1 {
      background-image: url(path/to/image1.jpg);
      background-size: cover;
