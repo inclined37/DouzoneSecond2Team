@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito-VariableFont_wght.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.date-btnBox.off{
+    display: none;
+}
+
+.page-Heading{
+    margin-top: 50px;
+}
+.date-btnBox{
+    position: absolute;
+    top: 53px;
+    right: 150px;
+}
+.date-btnBox > button{
+    margin-right: 1px;
+    padding: 2px 10px 2px 10px;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Nunito';
+    color: #4E73DF;
+    background-color:aliceblue;
+    box-shadow: 3px;
+}
+.date-btnBox > button.on{
+    color: aliceblue;
+    background-color:#4E73DF;
+}
+#date-select{
+    position: relative;
+    font-weight: normal;
+}
