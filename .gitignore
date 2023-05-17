@@ -10,6 +10,17 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Folder
+.settings/
+build/
+.classpath
+.project
+java/
+META_INF/
+WEB-INF/
+
+
+
 # Package Files #
 *.jar
 *.war
