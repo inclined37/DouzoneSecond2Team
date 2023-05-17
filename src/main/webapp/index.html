@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="resources/css/sb-admin-2.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -197,48 +196,62 @@
                             </div>
                         </div>
 
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                         <!-- Pie Chart -->
+                          <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                        aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Dropdown Header:</div>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
+                </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="chart-pie pt-4 pb-2">
+                    <canvas id="myPieChart"></canvas>
+                    
+                </div>
+                <div class="mt-4 text-center small">
+<!--
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-1"></i> 5/11(목)
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-2"></i> 5/12(금)
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-3"></i> 5/13(토)
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-4"></i> 5/14(일)
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-5"></i> 5/15(월)
+                    </span>
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-6"></i> 5/16(화)
+                    </span>
+
+                    <span class="mr-2">
+                        <i class="fas fa-circle text-7"></i> 5/17(수)
+                    </span>
+-->
+                </div>
+            </div>
+        </div>
+    </div>
 
                     <!-- Content Row -->
                     <div class="row">
@@ -249,37 +262,46 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">인구당 일별 확진률</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                    <h4 id="mmdd1"class="small font-weight-bold"></h4><span id="span1" class="float-right"></span>
+
+                                   <div class="progress mb-4">
+                                        <div id="percent1" class="progress-bar bg-danger" role="progressbar"
                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
+
+										<h4 id="mmdd2" class="small font-weight-bold"></h4><span id="span2" class="float-right"></span>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                        <div id="percent2" class="progress-bar bg-warning" role="progressbar"
                                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
+                                    <h4 id="mmdd3" class="small font-weight-bold"></h4><span id="span3" class="float-right"></span>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
+                                        <div id="percent3" class="progress-bar" role="progressbar"
                                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
+                                    <h4 id="mmdd4" class="small font-weight-bold"></h4><span id="span4" class="float-right"></span>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                        <div id="percent4" class="progress-bar bg-info" role="progressbar"
                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
+                                    <h4 id="mmdd5" class="small font-weight-bold"></h4><span id="span5" class="float-right"></span>
                                     <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                        <div id="percent5" class="progress-bar bg-success" role="progressbar"
+                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <br>
+                                    <h4 id="mmdd6" class="small font-weight-bold"></h4><span id="span6" class="float-right"></span>
+                                    <div class="progress">
+                                        <div id="percent6" class="progress-bar bg-success" role="progressbar"
+                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <br>
+                                    <h4 id="mmdd7" class="small font-weight-bold"></h4><span id="span7" class="float-right"></span>
+                                    <div class="progress">
+                                        <div id="percent7" class="progress-bar bg-success" role="progressbar"
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
@@ -352,6 +374,17 @@
             </div>
         </div>
     </div>
+    
+    <!-- ---------------------------------------- -->
+    
+       
+    
+    
+    
+    
+    
+    
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="resources/vendor/jquery/jquery.min.js"></script>
@@ -363,13 +396,20 @@
     <!-- Custom scripts for all pages-->
     <script src="resources/js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
+    <!-- Page level plugins 
     <script src="resources/vendor/chart.js/Chart.min.js"></script>
+    -->
 
     <!-- Page level custom scripts -->
     <script src="resources/js/demo/chart-area-demo.js"></script>
     <script src="resources/js/demo/chart-pie-demo.js"></script>
-    <script src="js/main.js"></script>
+    <!--  <script src="js/main.js"></script>-->
+    
+    <!--석진 js-->
+    <script src="js/jsj.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
 </body>
 </html>
