@@ -16,7 +16,7 @@ build/
 .classpath
 .project
 java/
-META_INF/
+META-INF/
 WEB-INF/
 
 
