@@ -66,3 +66,4 @@ let rate7 = data.response.result[0].rate7;     // 인구 10만명당 발생현�
 
 let mmdd8 = data.response.result[0].mmdd8;     // 일자_8: 주간일평균
 let cnt8 = data.response.result[0].cnt8;       // 일일발생현황_8:
+
