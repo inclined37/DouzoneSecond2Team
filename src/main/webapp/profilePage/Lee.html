@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>칸반보드</title>
+    <link rel="stylesheet" href="/resources/css/Lee.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#section1">자기소개</a></li>
+                <li><a href="#section2">칸반보드</a></li>
+
+                <li><a href="../index.html">이전메뉴로</a></li>
+
+            </ul>
+        </nav>
+        <nav class="mini-nav">
+            <a href=""><img id="mini-nav-btn" src="/resources/img/mini.png" alt="menu" width="50px" /></a> <a href="#"><img id="mini-nav-logo" src="/resources/img/logo.png" alt="menu" /></a>
+            <div id="mini-nav-menu">
+                <ul>
+                    <li><a href="#section1">자기소개</a></li>
+                    <li><a href="#section2">칸반보드</a></li>
+                    <li><a href="../index.html">이전메뉴로</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <div class="info">
+            <div class="index_left">
+                <!-- 프로필 이미지 -->
+                <div class="img">
+                    <img id="profile-img" src="/resources/img/join.jpg">
+                </div>
+            </div>
+            <div class="index_right">
+                <p><span id="age"></span></p>
+                <p><span id="name"></span></p>
+                <p><span id="location"></span></p>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <h1 id=>칸반보드</h1>
+        <div class=taskDiv>
+            <form id="taskForm">
+                <label for="taskDate">날짜:</label>
+                <input type="date" id="taskDate">
+                <label for="taskContent">내용:</label>
+                <input type="text" id="taskContent">
+                <!--
+            <input type="button" value="추가하기">
+            <button type="submit">추가하기</button>
+            -->
+
+            </form>
+        </div>
+        <div class="kanban">
+            <div class="kanban-column">
+                <h2>해야하는일</h2>
+                <div class="kanban-tasks" id="todo"></div>
+            </div>
+            <div class="kanban-column">
+                <h2>하고있는일</h2>
+                <div class="kanban-tasks" id="doing"></div>
+            </div>
+            <div class="kanban-column">
+                <h2>완료한일</h2>
+                <div class="kanban-tasks" id="done"></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="/resources/js/Lee.js"></script></html>

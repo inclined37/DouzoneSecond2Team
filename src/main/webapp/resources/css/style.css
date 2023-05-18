@@ -1,305 +1,359 @@
 @font-face {
-     font-family: 'ya';
-     src: url('야놀자_야체_Regular.ttf') format('woff');
+    font-family: 'ya';
+    src: url('야놀자_야체_Regular.ttf') format('woff');
 }
- html {
-     scroll-behavior: smooth;
-     font-family: 'ya';
+html {
+    scroll-behavior: smooth;
+    font-family: 'ya';
 }
- body {
-     margin: 0;
+body {
+    margin: 0;
 }
- header {
-     position: fixed;
-     top: 0;
-     width: 100%;
-     background-color: #333;
-     color: #fff;
-     padding: 10px;
-     border-radius: 10px;
-     min-height: 80px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
- .main-nav {
-     flex: 1;
+.main-nav {
+    flex: 1;
 }
- ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     display: flex;
-     justify-content: flex-end;
-     height: 100%;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
 }
- li {
-     margin: 10px 10px 0 10px;
-     height: 100%;
-     display: flex;
-     align-items: center;
-     padding: 0 10px;
+li {
+    margin: 10px 10px 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
- a {
-     color: #fff;
-     text-decoration: none;
-     font-size: 1.5em;
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
 }
- .mini-nav {
-     display: flex;
-     align-items: center;
-     justify-content: flex-start;
-     margin-right: 10px;
-     order: -1;
-     height: 70px;
-    /* 높이 조정 */
+.mini-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+    order: -1;
+    height: 70px;
+   /* 높이 조정 */
 }
- .mini-nav ul {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     height: 100%;
-    /* 높이 100% */
+.mini-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+   /* 높이 100% */
 }
- .mini-nav li {
-     margin: 5px 0;
-     text-align: center;
-     height: 25px;
+.mini-nav li {
+    margin: 5px 0;
+    text-align: center;
+    height: 25px;
 }
- .mini-nav a {
-     color: #fff;
-     text-decoration: none;
-     font-size: 1.2em;
+.mini-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
 }
- #mini-nav-menu {
-     display: none;
-     position: absolute;
-     top: 100%;
-     left: 0;
-     background-color: #333;
-     padding: 20px;
-    /* padding 20px로 변경 */
-     border-radius: 10px;
+#mini-nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+   /* padding 20px로 변경 */
+    border-radius: 10px;
 }
- #mini-nav-btn:hover + #mini-nav-menu {
-     display: block;
+#mini-nav-btn:hover + #mini-nav-menu {
+    display: block;
 }
- .show {
-     display: block !important;
+.show {
+    display: block !important;
 }
- section {
-     min-height: calc(100vh - 80px);
-     padding-top: 80px;
+section {
+    min-height: calc(100vh - 300px);
+    padding-top: 40px;
 }
- #section1 {
-     background-image: url(path/to/image1.jpg);
-     background-size: cover;
-     background-position: center;
-     padding-top: 80px;
-    /* 헤더의 높이만큼 패딩 추가 */
-     display: flex;
-     justify-content: space-around;
-     padding-top: 150px;
-     flex-wrap: wrap;
+section.on{
+    display:block;
 }
- #section2 {
-     background-image: url(path/to/image2.jpg);
-     background-size: cover;
-     background-position: center;
-     padding-top: 150px;
-    /* 헤더의 높이만큼 패딩 추가 */
+section.off{
+    display: none;
 }
- #section3 {
-     background-image: url(path/to/image3.jpg);
-     background-size: cover;
-     background-position: center;
-     padding-top: 150px;
-    /* 헤더의 높이만큼 패딩 추가 */
+.nav-link{
+    font-size: 28px;
 }
- #mini-nav-logo {
-     width: 200px;
+.bg-dark{
+	background-image: url(../img/universe.jpg);
 }
- ul.playlist {
-     list-style: none;
-     padding: 0;
-     margin: 0;
+.cardlist{
+    margin: 50px 0px;
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-self: center;
+    gap: 15px 15px;
 }
- ul.playlist li {
-     cursor: pointer;
-     padding: 10px;
-     border-bottom: 1px solid #ddd;
+.card.h-100 {
+    width: 450px;
 }
- ul.playlist li:hover {
-     background-color: #f9f9f9;
+.card-header {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: calc(1.375rem + 1.5vw);
+    font-size: 60px;
 }
- .mainAudio {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+#section1 {
+   /*background-image: url(path/to/image1.jpg);*/
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+   /* 헤더의 높이만큼 패딩 추가 */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    flex-wrap: wrap;
 }
- .playlist {
-     list-style: none;
-     margin: 0;
-     padding: 0;
+#section2 {
+   /*background-image: url(path/to/image2.jpg);*/
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+   /* 헤더의 높이만큼 패딩 추가 */
 }
- .playlist li {
-     cursor: pointer;
-     margin: 20px;
-     padding: 10px;
-     background-color: #eee;
-     border-radius: 10px;
-     font-size: 25px 
+#section3 {
+   /*background-image: url(path/to/image3.jpg);*/
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+   /* 헤더의 높이만큼 패딩 추가 */
 }
- .playlist li:hover {
-     background-color: #ccc;
+#mini-nav-logo {
+    width: 200px;
 }
- #song-info-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-top: 20px;
+ul.playlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
- #album-art {
-     width: 300px;
-     height: 300px;
-     align-content: center;
-     object-fit: cover;
-     border-radius: 10px;
+ul.playlist li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
- #song-info {
-     font-size: 18px;
-     font-weight: bold;
-     margin-top: 10px;
+ul.playlist li:hover {
+    background-color: #f9f9f9;
 }
- #section1 h1{
-     position: absolute;
-    /* h1 태그를 절대 위치로 설정합니다. */
-     top: 80px;
-    /* 헤더의 높이만큼 띄웁니다. */
-     left: 50%;
-    /* 가로 위치를 조정합니다. */
-     transform: translateX(-50%);
-    /* h1 태그를 가운데 정렬합니다. */
-     margin-bottom: 10px;
-    /* h1 태그 아래에 여백 추가 */
-     font-size: 80px;
+.mainAudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
- #section2 h1 {
-     text-align: center;
-     font-size: 70px;
-     margin: auto;
+.playlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
- .profiles-wrapper {
-     display: flex;
-     justify-content: space-around;
-     padding: 80px;
-     flex-wrap: wrap;
+.playlist li {
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 25px 
 }
- .profile {
-     width: calc(50% - 40px);
-    /* 너비를 50%로 조정하고, 양쪽 마진을 고려해 40px을 뺍니다. */
-     margin: 0 20px;
-    /* 각 프로필 양쪽에 마진 추가 */
-     margin-bottom: 20px;
-    /* 하단 마진 추가 */
-     text-align: center;
+.playlist li:hover {
+    background-color: #ccc;
 }
- .profile img {
-     width: 300px;
-     height: 300px;
-     object-fit: cover;
-     border-radius: 10%;
+#song-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
- .profile p {
-     margin-top: 10px;
-     font-size: 50px;
-     font-weight: bold;
+#album-art {
+    width: 300px;
+    height: 300px;
+    align-content: center;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#song-info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#section1 h1{
+    position: absolute;
+   /* h1 태그를 절대 위치로 설정합니다. */
+    top: 80px;
+   /* 헤더의 높이만큼 띄웁니다. */
+    left: 50%;
+   /* 가로 위치를 조정합니다. */
+    transform: translateX(-50%);
+   /* h1 태그를 가운데 정렬합니다. */
+    margin-bottom: 10px;
+   /* h1 태그 아래에 여백 추가 */
+    font-size: 80px;
+}
+#section2 h1 {
+    text-align: center;
+    font-size: 70px;
+    margin: auto;
+}
+.profiles-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    flex-wrap: wrap;
+}
+.profile {
+    width: calc(50% - 40px);
+   /* 너비를 50%로 조정하고, 양쪽 마진을 고려해 40px을 뺍니다. */
+    margin: 0 20px;
+   /* 각 프로필 양쪽에 마진 추가 */
+    margin-bottom: 20px;
+   /* 하단 마진 추가 */
+    text-align: center;
+}
+.profile img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.profile p {
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 /* 반응형 미디어 쿼리 추가 */
- @media (max-width: 768px) {
-     .profile {
-         width: 100%;
-        /* 화면 크기가 768px 이하일 때, 프로필의 너비를 100%로 설정합니다. */
-         margin: 0;
-         margin-bottom: 20px;
-    }
-     .profiles-wrapper {
-         padding: 50px;
-        /* 화면 크기가 768px 이하일 때, profiles-wrapper의 패딩을 줄입니다. */
-    }
+@media (max-width: 768px) {
+    .profile {
+        width: 100%;
+       /* 화면 크기가 768px 이하일 때, 프로필의 너비를 100%로 설정합니다. */
+        margin: 0;
+        margin-bottom: 20px;
+   }
+    .profiles-wrapper {
+        padding: 50px;
+       /* 화면 크기가 768px 이하일 때, profiles-wrapper의 패딩을 줄입니다. */
+   }
 }
- .videos{
-     margin: 10px 50px 10px 50px;
-     min-width: 600px;
-     width: 40%;
+.videos{
+    margin: 10px 50px 10px 50px;
+    min-width: 600px;
+    width: 40%;
 }
- .videos.on{
-     display: block;
+.videos.on{
+    display: block;
 }
- .videos.off{
-     display: none;
+.videos.off{
+    display: none;
 }
- #section3 > h1{
-     margin: auto;
-     font-size: 70px;
-     width: fit-content;
+#section3 > h1{
+    margin: auto;
+    font-size: 70px;
+    width: fit-content;
 }
- #section3 .video-container{
-     margin: auto;
-     width: fit-content;
-     display: flex;
-     flex-direction: row;
+#section3 .video-container{
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
 }
- #section3 .mainVideo-add{
-     display: flex;
-     flex-direction: column;
+#section3 .button-list{
+    margin-top:10px;
+    width: 40%;
+    min-width: 500px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211,211,211,0.8);
 }
- #section3 .button-list{
-     margin-top:10px;
-     width: 40%;
-     min-width: 600px;
-     height: 100px;
-     display: flex;
-     flex-direction: column;
+#section3 .button-list > a{
+    width: 100%;
+    min-width: 500px;
+    height: 40px;
+    padding: 2px 10px 2px 10px;
+    cursor: pointer;
+    background-color: lightgray;
+    color: #fff;
 }
- #section3 .button-list > a{
-     width: 40%;
-     min-width: 600px;
-     height: 40px;
-     padding: 2px 10px 2px 10px;
-     cursor: pointer;
-     background-color: lightgray;
-     color: #fff;
+#section3 .button-list > a.on{
+    background-color: #333333;
+    color: #FCB86F;
 }
- #section3 .button-list > a.on{
-     background-color: #333333;
-     color: #FCB86F;
+#section3 .button-list > a:hover{
+    background-color: rgba(51,51,51,0.8);
+    color: rgb(252,184,111);
 }
- #section3 .button-list > a:hover{
-     background-color: #333333;
-     color: #FCB86F;
+#section3 .button-list > a:active{
+    transform: scale(1.05);
+    animation-duration: 750ms;
 }
- #section3 .button-list > a:active{
-     transform: scale(1.05);
-     animation-duration: 750ms;
+#section3 .video-detail{
+    margin: auto;
+    width: 95%;
+    padding: 15px 10px 15px 10px;
+    background-color: whitesmoke;
+    color: #333;
+    border-radius: 5px;
+    transform: translateX(25px);
 }
- #section3 .video-detail{
-     margin: 10px 10px 0px 10px;
-     width: 600px;
-     height: 100%;
-     padding: 15px 10px 15px 10px;
-     background-color: whitesmoke;
-     color: #333;
-     transform: translate(-10px, 35px);
-     border-radius: 5px;
+#section3 .video-detail>div{
+    width:100%;
+    font-size: 20px;
+    overflow: auto;
 }
- #section3 .video-detail>div{
-     width:100%;
-     overflow: auto;
+#section3 .video-detail > div.on{
+    display: block;
 }
- #section3 .video-detail > div.on{
-     display: block;
+#section3 .video-detail > div.off{
+    display: none;
 }
- #section3 .video-detail > div.off{
-     display: none;
+@media (max-width: 1399.98px) {
+    #section3 .video-container {
+        display: flex;
+        flex-direction: column;
+   }
+    #section3 .video-container > div {
+        display: block;
+        width: fit-content;
+        margin: auto;
+   }
+    .button-list {
+        margin-bottom: 20px;
+   }
+}
+@media (max-width: 991.98px) {
+    .cardlist{
+        margin: 50px 0px;
+        display:grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-self: center;
+        gap: 15px 15px;
+   }
 }

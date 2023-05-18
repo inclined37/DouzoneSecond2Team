@@ -1,12 +1,26 @@
-const miniNavBtn = document.getElementById('mini-nav-btn');
+
+ /*
+    const miniNavBtn = document.getElementById('mini-nav-btn');
+
     const miniNavMenu = document.getElementById('mini-nav-menu');
 
     miniNavBtn.addEventListener('click', (event) => {
         event.preventDefault();
         miniNavMenu.classList.toggle('show');
     });
-
-
+*/
+	document.getElementById("videoAtag").addEventListener("click", function(){
+		document.getElementById("musicAtag").setAttribute('class','nav-link');
+		document.getElementById("videoAtag").setAttribute('class','nav-link active');
+		document.getElementById("section2").setAttribute('class','off');
+		document.getElementById("section3").setAttribute('class','on');
+	});
+	document.getElementById("musicAtag").addEventListener("click", function(){
+		document.getElementById("videoAtag").setAttribute('class','nav-link');
+		document.getElementById("musicAtag").setAttribute('class','nav-link active');
+		document.getElementById("section3").setAttribute('class','off');
+		document.getElementById("section2").setAttribute('class','on');
+	});
 
     const audioPlayer = document.getElementById('audio-player');
     const audioSources = document.querySelectorAll('.playlist li');
@@ -22,6 +36,7 @@ const miniNavBtn = document.getElementById('mini-nav-btn');
     // 재생 목록의 곡을 클릭하면 해당 곡을 재생
     audioSources.forEach((source, index) => {
         source.addEventListener('click', () => {
+			console.log("***********");
             currentSource = index;
             audioPlayer.src = source.dataset.src;
             audioPlayer.play();
@@ -32,7 +47,12 @@ const miniNavBtn = document.getElementById('mini-nav-btn');
     audioPlayer.src = audioSources[currentSource].dataset.src;
 
     // 첫 번째 오디오 파일을 재생
-    audioPlayer.play();
+    
+  document.addEventListener("click", function() {
+    //audio.play(); // 오디오 재생
+      audioPlayer.play();
+  }, { once: true }); // 한 번만 실행되도록 설정
+
 
     function updateSongInfo(index) {
         const songInfo = document.getElementById('song-info');
@@ -51,12 +71,8 @@ const miniNavBtn = document.getElementById('mini-nav-btn');
         });
     });
 
-    // 첫 번째 오디오 파일을 재생
-    audioPlayer.src = audioSources[currentSource].dataset.src;
-    audioPlayer.play();
-    updateSongInfo(currentSource);
-
-
+    
+/*
 const jangImg = document.getElementById('jang');
 const originJangSrc = '/resources/img/bin.jpg';
 const hoverJangSrc = '/resources/img/binHeart.jpg';
@@ -104,7 +120,7 @@ aleumImg.addEventListener('mouseover',function(){
 aleumImg.addEventListener('mouseout',function(){
    aleumImg.src= originaleumSrc;
 });
-
+*/
 
 
 function togglevideo(index) {
@@ -139,6 +155,7 @@ function togglevideo(index) {
     }
   });
 }
+
 
 //-------------------------------------------------------------
 
@@ -190,9 +207,6 @@ document.getElementById("captureButton").addEventListener("click", function() {
   downloadLink.download = "capture.png";
   downloadLink.click();
 });
-
-
-
 
 
 

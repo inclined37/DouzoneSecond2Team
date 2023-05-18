@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'ya';
+    src: url('야놀자_야체_Regular.ttf') format('woff');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'ya';
+    background-color: #EAEAEA;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+    font-size: 70px;
+}
+
+.taskDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+#taskForm input {
+    margin: 0 20px;
+    font-size: 40px;
+}
+
+
+.kanban {
+    display: flex;
+    justify-content: space-around;
+    min-height: 500px;
+    overflow: hidden;
+
+}
+
+
+.kanban-column {
+    width: 30%;
+    min-height: 500px;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 0 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+
+
+}
+
+.kanban-column:nth-of-type(1) {
+    /* 첫 번째 .kanban-column에 적용할 스타일 */
+    background-color: #0064FF;
+}
+
+.kanban-column:nth-of-type(2) {
+    /* 두 번째 .kanban-column에 적용할 스타일 */
+    background-color: #FF6600;
+}
+
+.kanban-column:nth-of-type(3) {
+    /* 세 번째 .kanban-column에 적용할 스타일 */
+    background-color: #1FDA11;
+}
+
+
+.kanban-column h2 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin: 0px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #FFFFFF;
+
+}
+
+.kanban-column:nth-of-type(1) h2 {
+    /* 첫 번째 h2에 적용할 스타일 */
+    background-color: #0064FF;
+}
+
+.kanban-column:nth-of-type(2) h2 {
+    /* 두 번째 h2에 적용할 스타일 */
+    background-color: #FF6600;
+}
+
+.kanban-column:nth-of-type(3) h2 {
+    /* 세 번째 h2에 적용할 스타일 */
+    background-color: #1FDA11;
+}
+
+
+
+
+.kanban-tasks {
+    min-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.kanban-task {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    cursor: move;
+}
+
+.info {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-nav {
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+li {
+    margin: 10px 10px 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.mini-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 10px;
+    order: -1;
+    height: 70px;
+    /* 높이 조정 */
+}
+
+.mini-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* 높이 100% */
+}
+
+.mini-nav li {
+    margin: 5px 0;
+    text-align: center;
+    height: 25px;
+}
+
+.mini-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#mini-nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    /* padding 20px로 변경 */
+    border-radius: 10px;
+}
+
+#mini-nav-btn:hover + #mini-nav-menu {
+    display: block;
+}
+
+.show {
+    display: block !important;
+}
+
+section {
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+}
+
+
+
+#mini-nav-logo {
+    width: 200px;
+}
+
+
+.info {
+    float: left;
+
+    clear: both;
+
+    margin top: 100px;
+    width: 100%
+}
+
+.img {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#profile-img {
+    margin-top: 200px;
+    margin-left: 300px;
+    width: 400px;
+    height: 600px;
+    border-radius: 100px;
+}
+
+
+.index_right {
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 500px;
+}
