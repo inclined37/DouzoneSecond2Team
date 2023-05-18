@@ -28,12 +28,14 @@ header {
     z-index: 20;
     top:0;
 }
-header > a {
+.line > a {
     text-decoration: none;
-    color: white;
-    background-color: green;
-    height: 100%;
-    margin: 20px 0px 0px 20px;
+	 color: white;
+	 height: 100%;
+	 margin: 20px 0px 0px 20px;
+	 display: inline-block;
+	 vertical-align: middle;
+	 line-height: 30%;
 }
 #section2 .map-title {
     width: 500px;
@@ -72,6 +74,19 @@ header > a {
 #map-desc > ul {
     list-style: square;
     font-family: 'GmarketSansMedium';
+}
+#map-desc > ul > li{
+	margin: 5px 0px;
+}
+#map-desc > ul > li > a{
+	text-decoration-line: none;
+	background-color: #dedede;
+	padding: 2px;
+	border-radius: 5px;
+	color: #121212;
+}
+#map-desc > ul > li > a:hover{
+	color: #e46565;
 }
 .customoverlay {
     position: relation;
