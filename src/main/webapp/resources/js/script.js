@@ -1,4 +1,4 @@
-    const miniNavBtn = document.getElementById('mini-nav-btn');
+const miniNavBtn = document.getElementById('mini-nav-btn');
     const miniNavMenu = document.getElementById('mini-nav-menu');
 
     miniNavBtn.addEventListener('click', (event) => {
@@ -139,6 +139,58 @@ function togglevideo(index) {
     }
   });
 }
+
+//-------------------------------------------------------------
+
+/*
+document.getElementById("captureButton").addEventListener("click", function() {
+  const captureDiv = document.getElementById("captureVideo");
+  const width = captureDiv.offsetWidth;
+  const height = captureDiv.offsetHeight;
+
+  // 캡처용 캔버스 생성
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+
+  // 캔버스에 요소를 그림
+  const context = canvas.getContext("2d");
+  const video = captureDiv.querySelector("video");
+  context.drawImage(video, 0, 0, width, height);
+
+  // 캔버스 데이터를 이미지로 변환하여 다운로드
+  const imageDataURL = canvas.toDataURL("image/png");
+  const downloadLink = document.createElement("a");
+  downloadLink.href = imageDataURL;
+  downloadLink.download = "capture.png";
+  downloadLink.click();
+});
+
+*/
+
+document.getElementById("captureButton").addEventListener("click", function() {
+  const captureDiv = document.getElementById("captureVideo");
+  const width = captureDiv.offsetWidth;
+  const height = captureDiv.offsetHeight;
+
+  // 캡처용 캔버스 생성
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+
+  // 캔버스에 요소를 그림
+  const context = canvas.getContext("2d");
+  const video = captureDiv.querySelector("video");
+  context.drawImage(video, 0, 0, width, height);
+
+  // 캔버스 데이터를 이미지로 변환하여 다운로드
+  const imageDataURL = canvas.toDataURL("image/png");
+  const downloadLink = document.createElement("a");
+  downloadLink.href = imageDataURL;
+  downloadLink.download = "capture.png";
+  downloadLink.click();
+});
+
 
 
 
