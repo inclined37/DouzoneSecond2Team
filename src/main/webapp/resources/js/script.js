@@ -197,7 +197,7 @@ document.getElementById("captureButton").addEventListener("click", function() {
 
   // 캔버스에 요소를 그림
   const context = canvas.getContext("2d");
-  const video = captureDiv.querySelector("video");
+  const video = captureDiv.querySelector(".videos.on");
   context.drawImage(video, 0, 0, width, height);
 
   // 캔버스 데이터를 이미지로 변환하여 다운로드
