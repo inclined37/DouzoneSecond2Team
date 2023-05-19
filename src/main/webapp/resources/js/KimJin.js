@@ -1,4 +1,5 @@
 
+
 //animation
 let items = document.querySelectorAll('.clickoff');
 
@@ -53,6 +54,5 @@ function smoothScroll(e) {
 		behavior: 'smooth'
 	});
 }
-
 
 

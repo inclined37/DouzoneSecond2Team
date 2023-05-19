@@ -3,20 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Insert title here</title>
+	<title>Kimjin</title>
 	<link rel="stylesheet" href="../resources/css/KimJin.css"/>
+	<link rel="icon" type="image/x-icon" href="/resources/img/smile.png">
 	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ee448f93a431982597a1f2aeb1935611"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script defer src="../resources/js/KimJin.js"></script>
 </head>
 <body>
+	<div id="Introduce"></div>
 	<header class="line">
-		<a href="../Team2.html">2조 페이지로</a>
+		<a href="../index.html">2조 페이지로</a>
 	</header>
 	<!-- 리모컨 기능 -->
 	<div class="remote-box">
-		<a href="#section1">Introduce</a>
-		<a href="#section2">Academy</a>
+		<a href="#Introduce">Introduce</a>
+		<a href="#Academy">Academy</a>
 	</div>
 	<section id="section1">
 		<div class="profile-box">
@@ -64,6 +67,7 @@
 			</div>
 		</div>
 	</section>
+	<div id="Academy"></div>
 	<section id="section2">
 		<div class="map-title">현재 다니고 있는 곳은~</div>
 		<div class="map-content">
@@ -72,22 +76,31 @@
 				<div>DOUZONE 5기 <br><span>(한국소프트웨어산업협회, 서울특별시 종로구 명륜2가 창경궁로 254)</span></div>
 				<div>현재까지 수강한 과목들</div>
 				<ul>
-					<li>JAVA &nbsp;&nbsp;<a href="https://neighborly-faucet-d05.notion.site/JAVA-b936ab61d6844530acc0d9e465b9df2a" target="_blank">notion link</a></li>
-					<li>Oracle DB &nbsp;&nbsp;<a href="https://neighborly-faucet-d05.notion.site/DataBase-f59aae22039b40fa982c453cdcf31f1e" target="_blank">notion link</a></li>
-					<li>Maria DB</li>
-					<li>JDBC</li>
-					<li>HTML &nbsp;&nbsp;<a href="https://neighborly-faucet-d05.notion.site/Web-0cea97e11a444d12902ffc5dac25e752" target="_blank">notion link</a></li>
-					<li>CSS</li>
-					<li>JavaScript</li>
-					<li>etc</li>
+					<!--<a href="https://neighborly-faucet-d05.notion.site/JAVA-b936ab61d6844530acc0d9e465b9df2a" target="_blank">notion link</a>-->
+					<li><button onclick="swal({
+						text: 'JAVA에서는 JAVA의 입출력, 8가지(+1)타입과 Collection, Class, 상속, 인터페이스 등을 배웠습니다.',
+						content: ca1,
+						});">JAVA</button></li>
+					<!--<a href="https://neighborly-faucet-d05.notion.site/DataBase-f59aae22039b40fa982c453cdcf31f1e" target="_blank">notion link</a>-->
+					<li><button onclick="swal({
+						text: 'DB는 Oracle DB와 Maria DB의 기본적인 문법과 함수, 데이터 모델링 등을 배웠습니다. ',
+						});">DB</button></li>
+					<li><button onclick="swal({
+						text: 'JDBC에서는 DB와 JAVA를 연결하여 데이터 CRUD 작업을 하는 것을 배웠습니다.',
+						});">JDBC</button></li>
+					<li><button onclick="swal({
+						text: 'WEB에서는 tomcat 서버를 연결하여 html 페이지를 실행해보고, html과 css, js의 기본적인 문법과 DOM, 캡쳐링과 버블링, json, JSP 등을 배웠습니다.',
+						});">WEB</button></li>
+					<!--<a href="https://neighborly-faucet-d05.notion.site/Web-0cea97e11a444d12902ffc5dac25e752" target="_blank"></a>-->
 				</ul>
 			</div>
 		</div>
+		<img alt="" src="">
 	</section>
 </body>
 
 <script>
-	//MAP
+	//MAP ================================================
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
    	mapOption = { 
        	center: new kakao.maps.LatLng(37.583782851238425, 126.99998018715789), // 지도의 중심좌표
@@ -137,5 +150,18 @@
 	    content: content,
 	    yAnchor: 1 
 	});
+	
+	//sweetalert ===========================================
+	let ca1 = document.createElement('a');
+	ca1.setAttribute('href','https://neighborly-faucet-d05.notion.site/JAVA-b936ab61d6844530acc0d9e465b9df2a');
+	ca1.setAttribute('style','width:100px; height:100px;');
+	
+	let ca2 = document.createElement('a');
+	ca2.setAttribute('href','https://neighborly-faucet-d05.notion.site/DataBase-f59aae22039b40fa982c453cdcf31f1e');
+	ca2.setAttribute('style','width:100px; height:100px;');
+	
+	let ca3 = document.createElement('a');
+	ca3.setAttribute('href','https://neighborly-faucet-d05.notion.site/Web-0cea97e11a444d12902ffc5dac25e752');
+	ca3.setAttribute('style','width:100px; height:100px;');
 </script>
 </html>
