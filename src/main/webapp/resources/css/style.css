@@ -111,10 +111,15 @@ section.off{
     align-content: space-evenly;
     align-self: center;
     gap: 15px 15px;
+    position:relative;
 }
-.card.h-100 {
+.card.card-area {
     width: 450px;
 }
+.card.card-area:hover {
+    outline: 4px solid #FCB86F;
+}
+
 .card-header {
     margin-top: 100px;
     text-align: center;
