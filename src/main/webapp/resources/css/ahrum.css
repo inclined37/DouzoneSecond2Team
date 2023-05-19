@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@font-face {
+     font-family: 'ya';
+     src: url('야놀자_야체_Regular.ttf') format('woff');
+}
+ html {
+     scroll-behavior: smooth;
+     font-family: 'ya';
+}
+ body {
+     margin: 0;
+}
+ header {
+ 	
+     position: sticky;
+     top: 0;
+     width: 100%;
+     background-color: #ff8080;
+     color: #ffffff;
+     padding: 10px;
+     border-radius: 10px;
+     min-height: 80px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 40px;
+}
+ .topMenu{
+     flex: 1;
+}
+ ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: flex-end;
+     height: 100%;
+}
+ li {
+     margin: 10px 10px 0 10px;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     padding: 0 10px;
+}
+ a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 1.5em;
+}
+ .mini-topMenu {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     margin-right: 10px;
+     order: -1;
+     height: 60px;
+    /* 높이 조정 */
+}
+ .mini-topMenu ul {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: 100%;
+    /* 높이 100% */
+}
+ .mini-topMenu li {
+     margin: 5px 0;
+     text-align: center;
+     height: 25px;
+}
+ .mini-topMenu a {
+     color: #000000;
+     text-decoration: none;
+     font-size: 1.2em;
+}
+
+ body {
+      background-color: #E0F2FE;
+      font-family: 'ya';
+      text-align:center;
+      align-content: center; 
+
+    }
+    
+    .right-align {
+    float: right;
+    margin-left: 10px; /* 사진과 내용 사이의 간격을 조정할 수 있습니다. */
+    
+  }
+
+    .introduce{
+    
+      font-family: 'ya';
+      text-align: center;  
+      background-image: url('/resources/img/ahrum1.jpg'), url('/resources/img/ahrum1_1.jpg');
+  	  background-position: left, right;
+  	  background-size: 300px 350px;
+      background-repeat: no-repeat;
+      background-color: #F2F2F2;
+      padding: 20px;
+      border-radius: 200px;
+      width:100%;
+      color: #8080ff;
+    
+    }
+
+
+
+	section{
+		padding: 100px;		
+		height:100vh;
+		margin: auto;
+	}
+
+
+    .map-container {
+    	align-items: left;
+		display: flex; 	  	
+        background-color: #F2F2F2;
+        width:100%;
+
+	}
+	
+	@keyframes shake {
+	    0% { transform: translateX(-2px); }
+	    50% { transform: translateX(2px); }
+	    100% { transform: translateX(-2px); }
+	}
+	
+	#map {
+	    animation: shake 1s infinite;
+	}
+
+	.map-text {
+	
+	    margin-left: 20px; 
+ 
+	}
+     
+     button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff8080;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+	#result {
+	  display: none;
+	}
+	 
+
+	.box-container {
+	  display: flex;
+	  justify-content: center;
+
+	}
+	
+	.box {
+	  width: 300px;
+	  border: 1px solid #ccc;
+	  padding: 20px;
+	  background-color: #f5f5f5;
+	}
