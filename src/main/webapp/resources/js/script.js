@@ -30,6 +30,7 @@
         // 현재 재생 중인 오디오 파일이 끝나면, 다음 오디오 파일로 변경
         currentSource = (currentSource + 1) % audioSources.length;
         audioPlayer.src = audioSources[currentSource].dataset.src;
+            updateSongInfo(currentSource);
         audioPlayer.play();
     });
 
