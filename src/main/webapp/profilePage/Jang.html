@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <title>자기소개 홈페이지</title>
 <style>
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f5f5f5;
@@ -15,6 +27,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	color: black;
+	font-family: 'GmarketSansMedium';
 }
 
 .container {
@@ -26,7 +39,7 @@ body {
 
 .person {
 	position: relative;
-	top:100px;
+	top:90px;
 	width: 80%;
 	height: 80%;
 	border: 5px dotted #DBBC68;
@@ -44,7 +57,7 @@ body {
 .intro-line {
 	position: absolute;
 	top: 300px;
-	left: 500px;
+	left: 530px;
 	width: 5px;
 	height: 300px;
 	transform: rotate(-60deg);
@@ -60,7 +73,7 @@ body {
 .skill-line {
 	position: absolute;
 	top: 300px;
-	right: 550px;
+	right: 570px;
 	width: 5px;
 	height: 300px;
 	background-color: #DBBC68;
@@ -71,7 +84,7 @@ body {
 .contact-line {
 	position: absolute;
 	bottom: 100px;
-	left: 750px;
+	left: 780px;
 	width: 5px;
 	height: 300px;
 	background-color: #DBBC68;
@@ -82,7 +95,7 @@ body {
 .interest-line {
 	position: absolute;
 	bottom: 100px;
-	right: 800px;
+	right: 830px;
 	width: 5px;
 	height: 300px;
 	background-color: #DBBC68;
@@ -98,6 +111,8 @@ body {
 	border: 5px solid black;
 	border-radius: 15px;
 	border: 5px dotted #DBBC68;
+	width: 400px;
+	height: 350px;
 }
 
 .intro h1 {
@@ -111,13 +126,14 @@ body {
 	font-size: 20px;
 	margin: 0;
 	padding : 5px;
+	padding-left : 80px;
 }
 
 /* ------------------------------------------- */
 .skill {
 	position: absolute;
-	top: 100px;
-	right: 100px;
+	top: 150px;
+	right: 130px;
 	border: 5px solid black;
 	width: 400px;
 	height: 350px;
@@ -128,22 +144,23 @@ body {
 .skill h1 {
 	font-size: 50px;
 	margin: 0;
-	padding-bottom: 5px;
 	text-align: center;
 }
 
 .skill p {
-	font-size: 20px;
+	font-size: 15px;
 	margin: 0;
 }
 /* ------------------------------------------- */
 .contact {
 	position: absolute;
-	bottom: 100px;
+	bottom: 30px;
 	left: 100px;
 	border: 5px solid black;
 	border-radius: 15px;
 	border: 5px dotted #DBBC68;
+	width: 400px;
+	height: 350px;
 }
 
 .contact h1 {
@@ -156,7 +173,9 @@ body {
 .contact p {
 	font-size: 20px;
 	margin: 0;
-	padding : 5px;
+	margin-top : 10px;
+	padding-left : 25px;
+	padding-top : 10px;
 }
 
 .contact p img {
@@ -166,11 +185,11 @@ body {
 /* ------------------------------------------- */
 .interest {
 	position: absolute;
-	bottom: 50px;
-	right: 150px;
+	bottom: 30px;
+	right: 130px;
 	border: 5px solid black;
 	border-radius: 15px;
-	width: 350px;
+	width: 400px;
 	height: 350px;
 	border: 5px dotted #DBBC68;
 }
@@ -194,7 +213,8 @@ body {
 	width: 80px;
 	height: 80px;
 	display: inline-block;
-  margin: 20px;
+  	margin: 20px;
+  	margin-left:35px;
   
 }
 
@@ -306,8 +326,10 @@ footer div {
 			<p>이름 : 장석진</p>
 			<p>생년월일 : 1996.11.14</p>
 			<p>전화번호 : 010-5590-1852</p>
+			<p>혈액형 : A형</p>
 			<p>MBTI : ENFP</p>
 			<p>좌우명 : 과거를 후회하지 말자</p>
+			<p>좋아하는 색 : 빨간색</p>
 		</div>
 
 		<div class="skill">

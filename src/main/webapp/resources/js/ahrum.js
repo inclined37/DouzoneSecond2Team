@@ -1,3 +1,20 @@
+var isShaking = false;
+
+function startShake() {
+  if (!isShaking) {
+    document.querySelector(".box").classList.add("shake");
+    isShaking = true;
+  }
+}
+
+function stopShake() {
+  if (isShaking) {
+    document.querySelector(".box").classList.remove("shake");
+    isShaking = false;
+  }
+}
+
+
 document.getElementById('fortune-button').addEventListener('click', showFortune);
 
 function showFortune() {
@@ -22,7 +39,7 @@ var marker = {
 var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div
     staticMapOption = { 
         center: new kakao.maps.LatLng( 37.579445, 126.9699761), // 이미지 지도의 중심좌표
-        level: 2, // 이미지 지도의 확대 레벨
+        level: 4, // 이미지 지도의 확대 레벨
         marker: marker // 이미지 지도에 표시할 마커
     };
     
@@ -31,3 +48,4 @@ var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지
 var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
 
 marker.setDraggable(true); 
+
