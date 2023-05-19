@@ -34,7 +34,12 @@ header > a {
     background-color: green;
     height: 100%;
     margin: 20px 0px 0px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30%;
 }
+
+
 #section2 .map-title {
     width: 500px;
     padding-top:40px;
