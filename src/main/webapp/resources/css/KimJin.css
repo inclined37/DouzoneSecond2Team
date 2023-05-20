@@ -85,6 +85,7 @@ header {
 #map-desc > ul > li{
 	margin: 5px 0px;
 }
+/*
 #map-desc > ul > li > a{
 	text-decoration-line: none;
 	background-color: #dedede;
@@ -93,6 +94,14 @@ header {
 	color: #121212;
 }
 #map-desc > ul > li > a:hover{
+	color: #e46565;
+}
+*/
+.desc-btn {
+	border-style: none;
+	cursor: pointer;
+}
+.desc-btn:hover {
 	color: #e46565;
 }
 .customoverlay {

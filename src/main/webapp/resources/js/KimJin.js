@@ -13,11 +13,11 @@ items.forEach(item => {
 		item.classList.add('in-active');
 		item.classList.remove('active');
 		
-		/*
+		
 		setTimeout(() => {
 			item.classList.add('active');
 			item.style.opacity = '';
-		}, 1)*/
+		}, 1);
 		
 		
 		item.addEventListener('animationend', () => {
