@@ -8,9 +8,7 @@
      scroll-behavior: smooth;
      font-family: 'ya';
 }
- body {
-     margin: 0;
-}
+
  header {
  	 z-index:10;
      position: sticky;
@@ -29,58 +27,41 @@
  .topMenu{
      flex: 1;
 }
- ul {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     display: flex;
-     justify-content: flex-end;
-     height: 100%;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
 }
- li {
-     margin: 10px 10px 0 10px;
-     height: 100%;
-     display: flex;
-     align-items: center;
-     padding: 0 10px;
+
+li {
+  margin: 10px 10px 0 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
+
+li:first-child {
+  margin-left: 0;
+  margin-right: auto;
+}
+
  a {
      color: #fff;
      text-decoration: none;
      font-size: 1.5em;
 }
- .mini-topMenu {
-     display: flex;
-     align-items: center;
-     justify-content: flex-start;
-     margin-right: 10px;
-     order: -1;
-     height: 60px;
-    /* 높이 조정 */
-}
- .mini-topMenu ul {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     height: 100%;
-    /* 높이 100% */
-}
- .mini-topMenu li {
-     margin: 5px 0;
-     text-align: center;
-     height: 25px;
-}
- .mini-topMenu a {
-     color: #000000;
-     text-decoration: none;
-     font-size: 1.2em;
-}
+
 
  body {
       background-color: #E0F2FE;
       font-family: 'ya';
       text-align:center;
       align-content: center; 
+      margin: 0;
 
     }
     
@@ -94,9 +75,9 @@
     
       font-family: 'ya';
       text-align: center;  
-      background-image: url('/resources/img/ahrum1.jpg'), url('/resources/img/ahrum1_1.jpg');
-  	  background-position: left, right;
-  	  background-size: 300px 350px;
+      background-image: url('/resources/img/1.jpg');
+  	  background-position: left;
+  	  background-size: 400px 450px;
       background-repeat: no-repeat;
       background-color: #F2F2F2;
       padding: 20px;
@@ -129,7 +110,7 @@
 	    100% { transform: translateX(-2px); }
 	}
 	
-	#map {
+	#map1 {
 	    animation: shake 1s infinite;
 	}
 
@@ -166,6 +147,15 @@
 	  background-color: #f5f5f5;
 	}
 	
+	
+	
+	
+label {margin-bottom: 96px;}
+.label * {display: inline-block;vertical-align: top;}
+.label .left {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_l.png") no-repeat;display: inline-block;height: 24px;overflow: hidden;vertical-align: top;width: 7px;}
+.label .center {background: url(https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_bg.png) repeat-x;display: inline-block;height: 24px;font-size: 12px;line-height: 24px;}
+.label .right {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_r.png") -1px 0  no-repeat;display: inline-block;height: 24px;overflow: hidden;width: 6px;}
+
 	@keyframes shake {
   0% {
     transform: translateX(0);
